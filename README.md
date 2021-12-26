@@ -32,18 +32,18 @@ MySql                                  = 127.0.0.1:3307
 ```
 <p align="center">
 <kbd>
-    <img src="https://github.com/lwinmoethu25/loki-lwin-js/blob/master/screenshot/docker_desktop.PNG" width="250">
+    <img src="https://github.com/lwinmoethu25/loki-lwin-js/blob/master/screenshot/docker_desktop.PNG" width="500">
 </kbd>
 <br>
 <kbd>
-    <img src="https://github.com/lwinmoethu25/loki-lwin-js/blob/master/screenshot/create_pet.PNG" width="250">
+    <img src="https://github.com/lwinmoethu25/loki-lwin-js/blob/master/screenshot/create_pet.PNG" width="500">
 </kbd>
 <br>
 <kbd>
-    <img src="https://github.com/lwinmoethu25/loki-lwin-js/blob/master/screenshot/pet_detail.PNG" width="250">
+    <img src="https://github.com/lwinmoethu25/loki-lwin-js/blob/master/screenshot/pet_detail.PNG" width="500">
 </kbd>
 <br>
 <kbd>
-    <img src="https://github.com/lwinmoethu25/loki-lwin-js/blob/master/screenshot/add_to_cart.PNG" width="250">
+    <img src="https://github.com/lwinmoethu25/loki-lwin-js/blob/master/screenshot/add_to_cart.PNG" width="500">
 </kbd>
 </p>
