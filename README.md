@@ -18,28 +18,32 @@ docker-compose down --rmi all
 ```
 
 ## Open
+```bash
 Loki Backend  (Node.js)                = 127.0.0.1:7777
+```
+```bash
 Loki Frontend (React.js + Redux Store) = 127.0.0.1:8888
+```
+```bash
 PhpMyadmin                             = 127.0.0.1:9999
+```
+```bash
 MySql                                  = 127.0.0.1:3307
-
-
-![alt docker-desktop](http://url/to/img.png)
-
+```
 <p align="center">
 <kbd>
-    <img src="https://github.com/lwinmoethu25/loki-lwin-js/blob/master/screenshot/docker_desktop.png" width="250">
+    <img src="https://github.com/lwinmoethu25/loki-lwin-js/blob/master/screenshot/docker_desktop.PNG" width="250">
 </kbd>
 <br>
 <kbd>
-    <img src="https://github.com/lwinmoethu25/loki-lwin-js/blob/master/screenshot/create_pet.png" width="250">
+    <img src="https://github.com/lwinmoethu25/loki-lwin-js/blob/master/screenshot/create_pet.PNG" width="250">
 </kbd>
 <br>
 <kbd>
-    <img src="https://github.com/lwinmoethu25/loki-lwin-js/blob/master/screenshot/pet_detail.png" width="250">
+    <img src="https://github.com/lwinmoethu25/loki-lwin-js/blob/master/screenshot/pet_detail.PNG" width="250">
 </kbd>
 <br>
 <kbd>
-    <img src="https://github.com/lwinmoethu25/loki-lwin-js/blob/master/screenshot/add_to_cart.png" width="250">
+    <img src="https://github.com/lwinmoethu25/loki-lwin-js/blob/master/screenshot/add_to_cart.PNG" width="250">
 </kbd>
 </p>
