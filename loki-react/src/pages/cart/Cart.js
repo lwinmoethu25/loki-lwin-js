@@ -51,7 +51,12 @@ const Cart = ({ history }) => {
           'Loki',
           'Success, thanks for ordering our pet.',
           'success'
-        )
+        ).then((result) => { 
+          if (result.isConfirmed)
+          {
+            history.push(routes.HOME);
+          }
+        })
       }
     });
   };

@@ -57,7 +57,7 @@ const Header = () => {
                 </LinkContainer>
               )} */}
 
-              {userInfo && userInfo.role === 'admin' && (
+              {/* {userInfo && userInfo.role === 'admin' && (
                 <NavDropdown title={userInfo.name + ' (Admin)'} id="adminMenu">
                   <LinkContainer to={routes.PRODUCTS}>
                     <NavDropdown.Item>Manage Products</NavDropdown.Item>
@@ -69,7 +69,7 @@ const Header = () => {
                     <NavDropdown.Item>Logout</NavDropdown.Item>
                   </LinkContainer>
                 </NavDropdown>
-              )}
+              )} */}
             </Nav>
           </Navbar.Collapse>
         </Container>
