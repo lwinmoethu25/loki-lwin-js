@@ -40,6 +40,10 @@ MySql                                  = 127.0.0.1:3307
 </kbd>
 <br>
 <kbd>
+    <img src="https://github.com/lwinmoethu25/loki-lwin-js/blob/master/screenshot/db.PNG" width="500">
+</kbd>
+<br>
+<kbd>
     <img src="https://github.com/lwinmoethu25/loki-lwin-js/blob/master/screenshot/pet_detail.PNG" width="500">
 </kbd>
 <br>
