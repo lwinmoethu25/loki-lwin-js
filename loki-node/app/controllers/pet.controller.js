@@ -1,5 +1,5 @@
 const db = require("../models");
-const Pet = db.pets;
+const Pet = db.Pet;
 const Op = db.Sequelize.Op;
 
 // Create and Save a new Pet

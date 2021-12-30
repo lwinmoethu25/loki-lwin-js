@@ -18,6 +18,7 @@ services:
   loki-node:
     depends_on:
       - mysqldb
+    container_name: 'loki-node'
     build: ./loki-node
     restart: unless-stopped
     env_file: ./.env

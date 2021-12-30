@@ -5,6 +5,19 @@ Run with below command:
 ```bash
 docker-compose up -d --build
 ```
+Run Migrations & Seeders
+```bash
+docker exec -it loki-node /bin/bash
+```
+```bash
+cd app/
+```
+```bash
+npx sequelize-cli db:migrate
+```
+```bash
+npx sequelize-cli db:seed:all
+```
 
 ## Stop the Containers
 Stop with below command:

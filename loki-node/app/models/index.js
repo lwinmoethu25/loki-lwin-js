@@ -1,25 +1,61 @@
-const dbConfig = require("../config/db.config.js");
+'use strict';
 
-const Sequelize = require("sequelize");
-const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
-  host: dbConfig.HOST,
-  dialect: dbConfig.dialect,
-  port: dbConfig.port,
-  operatorsAliases: false,
+const fs = require('fs');
+const path = require('path');
+const Sequelize = require('sequelize');
+const basename = path.basename(__filename);
+const env = process.env.NODE_ENV || 'development';
+const config = require(__dirname + '/../config/config.json')[env];
+const db = {};
 
-  pool: {
-    max: dbConfig.pool.max,
-    min: dbConfig.pool.min,
-    acquire: dbConfig.pool.acquire,
-    idle: dbConfig.pool.idle
+let sequelize;
+if (config.use_env_variable) {
+  sequelize = new Sequelize(process.env[config.use_env_variable], {
+    host: process.env.DB_HOST,
+    dialect: config.dialect,
+    port: config.port,
+    operatorsAliases: false,
+  
+    pool: {
+      max: config.pool.max,
+      min: config.pool.min,
+      acquire: config.pool.acquire,
+      idle: config.pool.idle
+    }
+  });
+} else {
+  sequelize = new Sequelize(config.database, config.username, config.password, {
+    host: process.env.DB_HOST,
+    dialect: config.dialect,
+    port: config.port,
+    operatorsAliases: false,
+  
+    pool: {
+      max: config.pool.max,
+      min: config.pool.min,
+      acquire: config.pool.acquire,
+      idle: config.pool.idle
+    }
+  });
+}
+
+fs
+  .readdirSync(__dirname)
+  .filter(file => {
+    return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
+  })
+  .forEach(file => {
+    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
+    db[model.name] = model;
+  });
+
+Object.keys(db).forEach(modelName => {
+  if (db[modelName].associate) {
+    db[modelName].associate(db);
   }
 });
 
-const db = {};
-
-db.Sequelize = Sequelize;
 db.sequelize = sequelize;
-
-db.pets = require("./pet.model.js")(sequelize, Sequelize);
+db.Sequelize = Sequelize;
 
 module.exports = db;
